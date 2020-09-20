@@ -16,6 +16,8 @@ class AppCommunicator {
     
     //Load Initial Page
     private func loadInitialPage() {
-       //TODO: Load first view controller from here
+       let genericTabBarController = GenericTabbarViewController()
+       mainWindow.rootViewController = genericTabBarController
+       mainWindow.makeKeyAndVisible()
     }
 }

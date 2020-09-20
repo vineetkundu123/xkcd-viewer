@@ -1,0 +1,8 @@
+"home.tab.title" = "Home";
+"favorites.tab.title" = "Favorites";
+"home.page.title"  = "Comic #[comicNumber]";
+"next.button.title" = "->";
+"previous.button.title" = "<-";
+"first.button.title" = "<<-";
+"last.button.title" = "->>";
+"search.bar.placeholder." = "Comic-# or Text";

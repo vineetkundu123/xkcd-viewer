@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0DE429F5BC54CEBA1C1BB942 /* Pods_xkcd_viewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D74993DD631DFBEC54DE7AC /* Pods_xkcd_viewer.framework */; };
+		5B99C5292517925300C08C2C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C5282517925300C08C2C /* HomeViewModel.swift */; };
+		5B99C52C2517926B00C08C2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C52B2517926B00C08C2C /* HomeViewController.swift */; };
+		5B99C530251795FA00C08C2C /* CGFloat+AppMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C52F251795FA00C08C2C /* CGFloat+AppMargin.swift */; };
+		5B99C5362517B89300C08C2C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5B99C5382517B89300C08C2C /* Localizable.strings */; };
+		5B99C53C2517D69600C08C2C /* Double+toString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C53B2517D69600C08C2C /* Double+toString.swift */; };
+		5B99C5412517D98900C08C2C /* GenericTabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C5402517D98900C08C2C /* GenericTabbarViewController.swift */; };
+		5B99C5442517DA2F00C08C2C /* FavoritesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C5432517DA2F00C08C2C /* FavoritesViewModel.swift */; };
+		5B99C5462517DA3E00C08C2C /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C5452517DA3E00C08C2C /* FavoritesViewController.swift */; };
+		5B99C5482517DC3400C08C2C /* UIImage+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C5472517DC3400C08C2C /* UIImage+Extension.swift */; };
 		5BC5234125174AFC00E8F65C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5234025174AFC00E8F65C /* AppDelegate.swift */; };
 		5BC5234A25174B0000E8F65C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5234925174B0000E8F65C /* Assets.xcassets */; };
 		5BC5234D25174B0000E8F65C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5234B25174B0000E8F65C /* LaunchScreen.storyboard */; };
@@ -43,6 +52,17 @@
 		36B4BC045B657B3936F98A91 /* Pods_xkcd_viewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xkcd_viewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		507D9C74AA3620CD38C4A6FC /* Pods-xkcd-viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xkcd-viewer.release.xcconfig"; path = "Target Support Files/Pods-xkcd-viewer/Pods-xkcd-viewer.release.xcconfig"; sourceTree = "<group>"; };
 		51F0BC56EDB6B843EFF68BAE /* Pods-xkcd-viewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xkcd-viewer.debug.xcconfig"; path = "Target Support Files/Pods-xkcd-viewer/Pods-xkcd-viewer.debug.xcconfig"; sourceTree = "<group>"; };
+		5B99C5282517925300C08C2C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5B99C52B2517926B00C08C2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5B99C52F251795FA00C08C2C /* CGFloat+AppMargin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+AppMargin.swift"; sourceTree = "<group>"; };
+		5B99C5372517B89300C08C2C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5B99C5392517B8E900C08C2C /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		5B99C53A2517B8E900C08C2C /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5B99C53B2517D69600C08C2C /* Double+toString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+toString.swift"; sourceTree = "<group>"; };
+		5B99C5402517D98900C08C2C /* GenericTabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericTabbarViewController.swift; sourceTree = "<group>"; };
+		5B99C5432517DA2F00C08C2C /* FavoritesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModel.swift; sourceTree = "<group>"; };
+		5B99C5452517DA3E00C08C2C /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		5B99C5472517DC3400C08C2C /* UIImage+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Extension.swift"; sourceTree = "<group>"; };
 		5BC5233D25174AFC00E8F65C /* xkcd-viewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "xkcd-viewer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BC5234025174AFC00E8F65C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BC5234925174B0000E8F65C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -89,6 +109,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B99C5272517922500C08C2C /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				5B99C53D2517D95800C08C2C /* Generic Tabbar */,
+				5B99C52A2517925600C08C2C /* Home */,
+				5B99C5422517DA1700C08C2C /* Favorites */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		5B99C52A2517925600C08C2C /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				5B99C5282517925300C08C2C /* HomeViewModel.swift */,
+				5B99C52B2517926B00C08C2C /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		5B99C52E251795B600C08C2C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5B99C52F251795FA00C08C2C /* CGFloat+AppMargin.swift */,
+				5B99C53B2517D69600C08C2C /* Double+toString.swift */,
+				5B99C5472517DC3400C08C2C /* UIImage+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5B99C5332517B87500C08C2C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5B99C5382517B89300C08C2C /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5B99C53D2517D95800C08C2C /* Generic Tabbar */ = {
+			isa = PBXGroup;
+			children = (
+				5B99C5402517D98900C08C2C /* GenericTabbarViewController.swift */,
+			);
+			path = "Generic Tabbar";
+			sourceTree = "<group>";
+		};
+		5B99C5422517DA1700C08C2C /* Favorites */ = {
+			isa = PBXGroup;
+			children = (
+				5B99C5432517DA2F00C08C2C /* FavoritesViewModel.swift */,
+				5B99C5452517DA3E00C08C2C /* FavoritesViewController.swift */,
+			);
+			path = Favorites;
+			sourceTree = "<group>";
+		};
 		5BC5233425174AFC00E8F65C = {
 			isa = PBXGroup;
 			children = (
@@ -113,11 +187,14 @@
 		5BC5233F25174AFC00E8F65C /* xkcd-viewer */ = {
 			isa = PBXGroup;
 			children = (
-				5BC52395251760D500E8F65C /* Constants.swift */,
-				5BC5239225175F9200E8F65C /* Model */,
 				5BC5234025174AFC00E8F65C /* AppDelegate.swift */,
 				5BC5236225174EF600E8F65C /* AppCommunicator.swift */,
+				5BC52395251760D500E8F65C /* Constants.swift */,
+				5B99C52E251795B600C08C2C /* Extensions */,
+				5BC5239225175F9200E8F65C /* Model */,
+				5B99C5272517922500C08C2C /* Modules */,
 				5BC5237825175B7600E8F65C /* Services */,
+				5B99C5332517B87500C08C2C /* Resources */,
 				5BC5234925174B0000E8F65C /* Assets.xcassets */,
 				5BC5234B25174B0000E8F65C /* LaunchScreen.storyboard */,
 				5BC5234E25174B0000E8F65C /* Info.plist */,
@@ -285,6 +362,7 @@
 			knownRegions = (
 				en,
 				Base,
+				nb,
 			);
 			mainGroup = 5BC5233425174AFC00E8F65C;
 			productRefGroup = 5BC5233E25174AFC00E8F65C /* Products */;
@@ -303,6 +381,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BC52370251757BD00E8F65C /* .swiftlint.yml in Resources */,
+				5B99C5362517B89300C08C2C /* Localizable.strings in Resources */,
 				5BC5234D25174B0000E8F65C /* LaunchScreen.storyboard in Resources */,
 				5BC5234A25174B0000E8F65C /* Assets.xcassets in Resources */,
 			);
@@ -409,11 +488,19 @@
 				5BC5238625175B7600E8F65C /* HTTPTask.swift in Sources */,
 				5BC5238F25175DA200E8F65C /* ParameterEncoding.swift in Sources */,
 				5BC5238725175B7600E8F65C /* HTTPMethod.swift in Sources */,
+				5B99C52C2517926B00C08C2C /* HomeViewController.swift in Sources */,
 				5BC5238A25175B7600E8F65C /* APIManager.swift in Sources */,
 				5BC5238825175B7600E8F65C /* Router.swift in Sources */,
 				5BC52396251760D500E8F65C /* Constants.swift in Sources */,
 				5BC5238925175B7600E8F65C /* NetworkManager.swift in Sources */,
+				5B99C5442517DA2F00C08C2C /* FavoritesViewModel.swift in Sources */,
+				5B99C5412517D98900C08C2C /* GenericTabbarViewController.swift in Sources */,
+				5B99C5292517925300C08C2C /* HomeViewModel.swift in Sources */,
 				5BC5239025175DA200E8F65C /* URLParameterEncoding.swift in Sources */,
+				5B99C5482517DC3400C08C2C /* UIImage+Extension.swift in Sources */,
+				5B99C53C2517D69600C08C2C /* Double+toString.swift in Sources */,
+				5B99C5462517DA3E00C08C2C /* FavoritesViewController.swift in Sources */,
+				5B99C530251795FA00C08C2C /* CGFloat+AppMargin.swift in Sources */,
 				5BC5234125174AFC00E8F65C /* AppDelegate.swift in Sources */,
 				5BC5238525175B7600E8F65C /* ComicEndPoint.swift in Sources */,
 				5BC5238425175B7600E8F65C /* EndPointType.swift in Sources */,
@@ -439,10 +526,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		5B99C5382517B89300C08C2C /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B99C5372517B89300C08C2C /* en */,
+				5B99C53A2517B8E900C08C2C /* nb */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		5BC5234B25174B0000E8F65C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				5BC5234C25174B0000E8F65C /* Base */,
+				5B99C5392517B8E900C08C2C /* nb */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -454,6 +551,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -514,6 +612,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
