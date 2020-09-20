@@ -38,7 +38,7 @@ https://github.com/roberthein/TinyConstraints
 #### User can jump to first/last comic using the corresponding buttons
 
 
-### Search Comic
+### Search Comic (WIP)
 
 #### User can search for a text/comic number
 ##### If a number less than the number of the most recent comic is detected in the search keyword, the corresponding comic is loaded, otherwise the most relevant comic is loaded for the user depending on the searched keywords.
