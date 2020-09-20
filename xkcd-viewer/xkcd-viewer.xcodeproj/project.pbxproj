@@ -11,8 +11,10 @@
 		5BC5234125174AFC00E8F65C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5234025174AFC00E8F65C /* AppDelegate.swift */; };
 		5BC5234A25174B0000E8F65C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5234925174B0000E8F65C /* Assets.xcassets */; };
 		5BC5234D25174B0000E8F65C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5234B25174B0000E8F65C /* LaunchScreen.storyboard */; };
-		5BC5235825174B0100E8F65C /* xkcd_viewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5235725174B0100E8F65C /* xkcd_viewerTests.swift */; };
+		5BC5235825174B0100E8F65C /* XkcdViewerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5235725174B0100E8F65C /* XkcdViewerTests.swift */; };
 		5BC5236325174EF600E8F65C /* AppCommunicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC5236225174EF600E8F65C /* AppCommunicator.swift */; };
+		5BC52370251757BD00E8F65C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5236F251757BD00E8F65C /* .swiftlint.yml */; };
+		5BC52371251757BD00E8F65C /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 5BC5236F251757BD00E8F65C /* .swiftlint.yml */; };
 		B81924A750C846604D6B9F95 /* Pods_xkcd_viewerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36B4BC045B657B3936F98A91 /* Pods_xkcd_viewerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,9 +38,10 @@
 		5BC5234C25174B0000E8F65C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BC5234E25174B0000E8F65C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BC5235325174B0000E8F65C /* xkcd-viewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "xkcd-viewerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5BC5235725174B0100E8F65C /* xkcd_viewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = xkcd_viewerTests.swift; sourceTree = "<group>"; };
+		5BC5235725174B0100E8F65C /* XkcdViewerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XkcdViewerTests.swift; sourceTree = "<group>"; };
 		5BC5235925174B0100E8F65C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BC5236225174EF600E8F65C /* AppCommunicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCommunicator.swift; sourceTree = "<group>"; };
+		5BC5236F251757BD00E8F65C /* .swiftlint.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		6D74993DD631DFBEC54DE7AC /* Pods_xkcd_viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xkcd_viewer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B282F7CDCE6C213600BA83BE /* Pods-xkcd-viewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xkcd-viewerTests.release.xcconfig"; path = "Target Support Files/Pods-xkcd-viewerTests/Pods-xkcd-viewerTests.release.xcconfig"; sourceTree = "<group>"; };
 		EBFB58510966E975EE1E632C /* Pods-xkcd-viewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xkcd-viewerTests.debug.xcconfig"; path = "Target Support Files/Pods-xkcd-viewerTests/Pods-xkcd-viewerTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -72,6 +75,7 @@
 				5BC5233E25174AFC00E8F65C /* Products */,
 				ADD23D717FD6D69FA9D39984 /* Pods */,
 				96DBF48A7CD489353C26A2AF /* Frameworks */,
+				5BC5236F251757BD00E8F65C /* .swiftlint.yml */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,7 +103,7 @@
 		5BC5235625174B0100E8F65C /* xkcd-viewerTests */ = {
 			isa = PBXGroup;
 			children = (
-				5BC5235725174B0100E8F65C /* xkcd_viewerTests.swift */,
+				5BC5235725174B0100E8F65C /* XkcdViewerTests.swift */,
 				5BC5235925174B0100E8F65C /* Info.plist */,
 			);
 			path = "xkcd-viewerTests";
@@ -137,6 +141,7 @@
 				5BC5233A25174AFC00E8F65C /* Frameworks */,
 				5BC5233B25174AFC00E8F65C /* Resources */,
 				9DBF15EF650FC5E7EF36B5F8 /* [CP] Embed Pods Frameworks */,
+				5BC52364251751A000E8F65C /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -208,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC52370251757BD00E8F65C /* .swiftlint.yml in Resources */,
 				5BC5234D25174B0000E8F65C /* LaunchScreen.storyboard in Resources */,
 				5BC5234A25174B0000E8F65C /* Assets.xcassets in Resources */,
 			);
@@ -217,12 +223,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BC52371251757BD00E8F65C /* .swiftlint.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		5BC52364251751A000E8F65C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/SwiftLint/swiftlint\"\n";
+		};
 		8DC2B0FB94DD70496D21F1D6 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,7 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5BC5235825174B0100E8F65C /* xkcd_viewerTests.swift in Sources */,
+				5BC5235825174B0100E8F65C /* XkcdViewerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,6 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 93T63GNKTE;
 				INFOPLIST_FILE = "xkcd-viewer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -465,6 +490,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 93T63GNKTE;
 				INFOPLIST_FILE = "xkcd-viewer/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

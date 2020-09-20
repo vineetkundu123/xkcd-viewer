@@ -3,35 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = SwiftLint;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
-		0D24FEFEF4298905C4AE3E9FC22DBC38 /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53090B7B9F2DA5A542B6E0B2472A6E8A /* TinyConstraints.swift */; };
-		602071FBBC9CE2E7E138D4B67223D4A9 /* TinyConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D77A6777BC9B18328AE9BE85C5CF8D00 /* TinyConstraints-dummy.m */; };
+		0D24FEFEF4298905C4AE3E9FC22DBC38 /* TinyConstraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50A9DC993A512888C5AB244BAFD37E53 /* TinyConstraints.swift */; };
+		602071FBBC9CE2E7E138D4B67223D4A9 /* TinyConstraints-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 71B5DAF7A59F49A26F48CD7FE1A02465 /* TinyConstraints-dummy.m */; };
+		6EAABF2929242F79664891B6836284A9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		6FE10BC8F9F5EDF190E1C1EEE0B94662 /* Pods-xkcd-viewer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 114C461B5A6DC963ED06949383DC41D6 /* Pods-xkcd-viewer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		731B1290997CA276F0D2EED10D0567A2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		7F686C87FC60238F640B1973302B6D08 /* TinyConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C29655FF0056FD25EC57F7909547C21E /* TinyConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		80C64F8B50FDB2E25A939480C3FEC43A /* TinyConstraints+superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6C237044053DBA8B68378C6F80F10A1 /* TinyConstraints+superview.swift */; };
+		7F686C87FC60238F640B1973302B6D08 /* TinyConstraints-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C85D12C578DDE4B4341479A5BC634C7 /* TinyConstraints-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		80C64F8B50FDB2E25A939480C3FEC43A /* TinyConstraints+superview.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9C3688A9FFC1D9BBEAE9D0A31AE03BD /* TinyConstraints+superview.swift */; };
 		A6C96F6923946CD80A081E3096A36BB5 /* Pods-xkcd-viewerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A7F18439627E486DFEC08DA1EAB92DFF /* Pods-xkcd-viewerTests-dummy.m */; };
-		A9F69E16C2BC29A8A6F9829C4168109F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		CBF8630B51B556B1D93FF064C433A66E /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C09FE24794B2ED4575096B2F66BA5CC9 /* Constraints.swift */; };
-		CCAEE4BF0C676D5173590E04D29BAE92 /* TinyEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78051CAF65CCFDC2B674F3ABC68C4607 /* TinyEdgeInsets.swift */; };
-		CFF984D0BDE08492C60CC2D9C75E2C96 /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D2BF895255A9365BC69CAD063F1C0B4 /* Abstraction.swift */; };
-		D3C74E49A79775A9F69804D9785CF5D9 /* Pods-xkcd-viewer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 999BB6589EF5E0D001EBABD0590701EC /* Pods-xkcd-viewer-dummy.m */; };
-		DF7A6BC0D371FF7ECA74781F562C475F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13CF0EFA80D02F8C35745900DA3F45FF /* Stack.swift */; };
-		E4BE1A36AB2F656E9C7AFCFFAA696CA7 /* Pods-xkcd-viewer-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 114C461B5A6DC963ED06949383DC41D6 /* Pods-xkcd-viewer-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EAB56C7B2652650A976538B12FBAC59D /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40A2DF43C3E5A1D1E9A559D9F154D5D4 /* Constrainable.swift */; };
+		CBF8630B51B556B1D93FF064C433A66E /* Constraints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414F8746D629C0AD27B71586E7BAE10C /* Constraints.swift */; };
+		CCAEE4BF0C676D5173590E04D29BAE92 /* TinyEdgeInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E19037A246FBA44FBF4E25CC7BDBE /* TinyEdgeInsets.swift */; };
+		CFF984D0BDE08492C60CC2D9C75E2C96 /* Abstraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 365A2D789E9751066B2C0ED4D11FBC32 /* Abstraction.swift */; };
+		DF7A6BC0D371FF7ECA74781F562C475F /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AD332836AD12CE43A8F3881A891E78C /* Stack.swift */; };
+		EAB56C7B2652650A976538B12FBAC59D /* Constrainable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73F62DD3FCB97FE249A54D24F9F4EFA3 /* Constrainable.swift */; };
 		F3E8459E195EA4F2901CAE299B8E2744 /* Pods-xkcd-viewerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF689B0B1F1EEBB1FA69B65F9FD3D5BF /* Pods-xkcd-viewerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F628F5EA40B21027613C4BEE3BC6FF66 /* Pods-xkcd-viewer-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 999BB6589EF5E0D001EBABD0590701EC /* Pods-xkcd-viewer-dummy.m */; };
 		F89DDE2BE4B4C16826AC30BBC21ACC57 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		BCA3082AB80BEA1547D1DEB7CDA2CCE8 /* PBXContainerItemProxy */ = {
+		61C5431178E685DBC3C5B4F4B3A346B0 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 45C4E325E7851DD54CC3AD44C7A71935;
-			remoteInfo = TinyConstraints;
+			remoteGlobalIDString = 52B60EC2A583F24ACBB69C113F5488B9;
+			remoteInfo = SwiftLint;
 		};
 		D39259E8A28E6B0FB32849854C9C4234 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -40,6 +52,13 @@
 			remoteGlobalIDString = 2A9B0E7F5BB3ABC498F43C7DC1DF2C24;
 			remoteInfo = "Pods-xkcd-viewer";
 		};
+		E87A6E35B0667BCD389C3504D04086E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 45C4E325E7851DD54CC3AD44C7A71935;
+			remoteInfo = TinyConstraints;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -47,37 +66,39 @@
 		0A2A602E1FBA9D22B3954F1DE53F407C /* Pods_xkcd_viewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_xkcd_viewerTests.framework; path = "Pods-xkcd-viewerTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1021981FCA74C001A54443C098EDD42B /* Pods-xkcd-viewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-xkcd-viewer.debug.xcconfig"; sourceTree = "<group>"; };
 		114C461B5A6DC963ED06949383DC41D6 /* Pods-xkcd-viewer-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-xkcd-viewer-umbrella.h"; sourceTree = "<group>"; };
-		13CF0EFA80D02F8C35745900DA3F45FF /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = TinyConstraints/Classes/Stack.swift; sourceTree = "<group>"; };
 		1493668B83BA1EF2B7A56EE942ABC0E0 /* Pods-xkcd-viewerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-xkcd-viewerTests.release.xcconfig"; sourceTree = "<group>"; };
 		1750B28C088E29CD0095F0759E1ACE86 /* Pods-xkcd-viewer-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-xkcd-viewer-acknowledgements.markdown"; sourceTree = "<group>"; };
-		1BF03D2133CA6AF04040A63DA34C3F57 /* TinyConstraints-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TinyConstraints-Info.plist"; sourceTree = "<group>"; };
 		248EB203AE249596FFC55952F5590D95 /* TinyConstraints.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = TinyConstraints.framework; path = TinyConstraints.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		24BD3DAB11C04B9842EB91C7B54B4E06 /* TinyConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-prefix.pch"; sourceTree = "<group>"; };
+		272FEC02742A6ADE857F1125AC81EED6 /* SwiftLint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.release.xcconfig; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		37C5A7A34282932064D3F3E64FD93EFF /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
-		40A2DF43C3E5A1D1E9A559D9F154D5D4 /* Constrainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = TinyConstraints/Classes/Constrainable.swift; sourceTree = "<group>"; };
+		365A2D789E9751066B2C0ED4D11FBC32 /* Abstraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Abstraction.swift; path = TinyConstraints/Classes/Abstraction.swift; sourceTree = "<group>"; };
+		3C1E19037A246FBA44FBF4E25CC7BDBE /* TinyEdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyEdgeInsets.swift; path = TinyConstraints/Classes/TinyEdgeInsets.swift; sourceTree = "<group>"; };
+		414F8746D629C0AD27B71586E7BAE10C /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = TinyConstraints/Classes/Constraints.swift; sourceTree = "<group>"; };
 		4160A17583172CE468BB1A5A837E8E34 /* Pods-xkcd-viewerTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-xkcd-viewerTests-Info.plist"; sourceTree = "<group>"; };
-		53090B7B9F2DA5A542B6E0B2472A6E8A /* TinyConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyConstraints.swift; path = TinyConstraints/Classes/TinyConstraints.swift; sourceTree = "<group>"; };
+		4AD332836AD12CE43A8F3881A891E78C /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = TinyConstraints/Classes/Stack.swift; sourceTree = "<group>"; };
+		50A9DC993A512888C5AB244BAFD37E53 /* TinyConstraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyConstraints.swift; path = TinyConstraints/Classes/TinyConstraints.swift; sourceTree = "<group>"; };
 		6251DBC7856374295970A85E66494A22 /* Pods_xkcd_viewer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_xkcd_viewer.framework; path = "Pods-xkcd-viewer.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		653FC45B039BD91F10044F012EFA1664 /* Pods-xkcd-viewerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-xkcd-viewerTests.debug.xcconfig"; sourceTree = "<group>"; };
-		78051CAF65CCFDC2B674F3ABC68C4607 /* TinyEdgeInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TinyEdgeInsets.swift; path = TinyConstraints/Classes/TinyEdgeInsets.swift; sourceTree = "<group>"; };
-		7D2BF895255A9365BC69CAD063F1C0B4 /* Abstraction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Abstraction.swift; path = TinyConstraints/Classes/Abstraction.swift; sourceTree = "<group>"; };
+		71B5DAF7A59F49A26F48CD7FE1A02465 /* TinyConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyConstraints-dummy.m"; sourceTree = "<group>"; };
+		73F62DD3FCB97FE249A54D24F9F4EFA3 /* Constrainable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrainable.swift; path = TinyConstraints/Classes/Constrainable.swift; sourceTree = "<group>"; };
 		809832190DAC9B67A3C61A8ECF76CCAD /* Pods-xkcd-viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-xkcd-viewer.release.xcconfig"; sourceTree = "<group>"; };
+		8C85D12C578DDE4B4341479A5BC634C7 /* TinyConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-umbrella.h"; sourceTree = "<group>"; };
 		999BB6589EF5E0D001EBABD0590701EC /* Pods-xkcd-viewer-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-xkcd-viewer-dummy.m"; sourceTree = "<group>"; };
+		9AF40FC173A39594E9DEAAEE1714E27A /* TinyConstraints-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "TinyConstraints-Info.plist"; sourceTree = "<group>"; };
 		9D0C7A37A9C6FD20AF7C049380618973 /* Pods-xkcd-viewerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-xkcd-viewerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D9AAC5AF5C1C3BC3778D7C0C29CB1F6 /* TinyConstraints.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = TinyConstraints.modulemap; sourceTree = "<group>"; };
 		A02803D8D44CE4AB9C3D05F94DB4C206 /* Pods-xkcd-viewer-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-xkcd-viewer-Info.plist"; sourceTree = "<group>"; };
 		A40F17BB040CF57C1903DD69CE1A29EB /* Pods-xkcd-viewer-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-xkcd-viewer-frameworks.sh"; sourceTree = "<group>"; };
 		A7F18439627E486DFEC08DA1EAB92DFF /* Pods-xkcd-viewerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-xkcd-viewerTests-dummy.m"; sourceTree = "<group>"; };
 		A82896DE12B90D6AED546EC25934119D /* Pods-xkcd-viewer.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-xkcd-viewer.modulemap"; sourceTree = "<group>"; };
+		BE5F0C00E49568BB7953FBEEFE262261 /* TinyConstraints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.release.xcconfig; sourceTree = "<group>"; };
 		BF689B0B1F1EEBB1FA69B65F9FD3D5BF /* Pods-xkcd-viewerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-xkcd-viewerTests-umbrella.h"; sourceTree = "<group>"; };
-		BFE2FED9E5E9AC54EDA0E6C44E8B1755 /* TinyConstraints.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.release.xcconfig; sourceTree = "<group>"; };
-		C09FE24794B2ED4575096B2F66BA5CC9 /* Constraints.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraints.swift; path = TinyConstraints/Classes/Constraints.swift; sourceTree = "<group>"; };
 		C24C86C668DD4D634E8586A90882CC26 /* Pods-xkcd-viewerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-xkcd-viewerTests.modulemap"; sourceTree = "<group>"; };
-		C29655FF0056FD25EC57F7909547C21E /* TinyConstraints-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-umbrella.h"; sourceTree = "<group>"; };
-		C6C237044053DBA8B68378C6F80F10A1 /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TinyConstraints+superview.swift"; path = "TinyConstraints/Classes/TinyConstraints+superview.swift"; sourceTree = "<group>"; };
-		D14B8BA2E491A6DE3EEBB46DF34D90D4 /* TinyConstraints-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "TinyConstraints-prefix.pch"; sourceTree = "<group>"; };
-		D77A6777BC9B18328AE9BE85C5CF8D00 /* TinyConstraints-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "TinyConstraints-dummy.m"; sourceTree = "<group>"; };
-		E5E27C1634FB36D16B17E42A64881B91 /* TinyConstraints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.debug.xcconfig; sourceTree = "<group>"; };
+		E637FBB64FE0FF2AB789D3C12D2D2BB5 /* TinyConstraints.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = TinyConstraints.debug.xcconfig; sourceTree = "<group>"; };
+		E678F39E28A25AFC9D4A3A7B3C45143A /* SwiftLint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.debug.xcconfig; sourceTree = "<group>"; };
+		E9C3688A9FFC1D9BBEAE9D0A31AE03BD /* TinyConstraints+superview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "TinyConstraints+superview.swift"; path = "TinyConstraints/Classes/TinyConstraints+superview.swift"; sourceTree = "<group>"; };
 		F8EDC5DF1DF182E72C0B7B3F5FCC3A26 /* Pods-xkcd-viewerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-xkcd-viewerTests-acknowledgements.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,11 +119,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C8429124E9585A2BD46D8B3F77BC8218 /* Frameworks */ = {
+		AAC2C894619FBAF5D892F4E7724FA7E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A9F69E16C2BC29A8A6F9829C4168109F /* Foundation.framework in Frameworks */,
+				6EAABF2929242F79664891B6836284A9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,27 +140,20 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		66F7B86CE8FCF1C7A66B95E3D03A19DD /* Support Files */ = {
+		28C4A6781815C1700E4AC87135BAFF3A /* TinyConstraints */ = {
 			isa = PBXGroup;
 			children = (
-				37C5A7A34282932064D3F3E64FD93EFF /* TinyConstraints.modulemap */,
-				D77A6777BC9B18328AE9BE85C5CF8D00 /* TinyConstraints-dummy.m */,
-				1BF03D2133CA6AF04040A63DA34C3F57 /* TinyConstraints-Info.plist */,
-				D14B8BA2E491A6DE3EEBB46DF34D90D4 /* TinyConstraints-prefix.pch */,
-				C29655FF0056FD25EC57F7909547C21E /* TinyConstraints-umbrella.h */,
-				E5E27C1634FB36D16B17E42A64881B91 /* TinyConstraints.debug.xcconfig */,
-				BFE2FED9E5E9AC54EDA0E6C44E8B1755 /* TinyConstraints.release.xcconfig */,
+				365A2D789E9751066B2C0ED4D11FBC32 /* Abstraction.swift */,
+				73F62DD3FCB97FE249A54D24F9F4EFA3 /* Constrainable.swift */,
+				414F8746D629C0AD27B71586E7BAE10C /* Constraints.swift */,
+				4AD332836AD12CE43A8F3881A891E78C /* Stack.swift */,
+				50A9DC993A512888C5AB244BAFD37E53 /* TinyConstraints.swift */,
+				E9C3688A9FFC1D9BBEAE9D0A31AE03BD /* TinyConstraints+superview.swift */,
+				3C1E19037A246FBA44FBF4E25CC7BDBE /* TinyEdgeInsets.swift */,
+				DB19F8358FA0FE83819C9522A4E00D59 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/TinyConstraints";
-			sourceTree = "<group>";
-		};
-		6ABEEA7AE8070D3C9261B4662AC5A6F2 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				EA51ADCB66A7E8EED3331ECA1D6C58FC /* TinyConstraints */,
-			);
-			name = Pods;
+			name = TinyConstraints;
+			path = TinyConstraints;
 			sourceTree = "<group>";
 		};
 		6CFD2BB82FCD70365C4E36847810881E /* Pods-xkcd-viewerTests */ = {
@@ -156,6 +170,15 @@
 			);
 			name = "Pods-xkcd-viewerTests";
 			path = "Target Support Files/Pods-xkcd-viewerTests";
+			sourceTree = "<group>";
+		};
+		7CEF62326975475A8C5DF8EF65E5C269 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F3A9ACE2901DE443A0467D980AB2B665 /* SwiftLint */,
+				28C4A6781815C1700E4AC87135BAFF3A /* TinyConstraints */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		A4F51052AB9763F0F15CB03AC3C9D079 /* Pods-xkcd-viewer */ = {
@@ -188,7 +211,7 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				6ABEEA7AE8070D3C9261B4662AC5A6F2 /* Pods */,
+				7CEF62326975475A8C5DF8EF65E5C269 /* Pods */,
 				0D2CDE287AB921AD0B5816A766B9CF01 /* Products */,
 				D15AF0BAE881074828F10A1D5EE9C0D9 /* Targets Support Files */,
 			);
@@ -211,25 +234,51 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EA51ADCB66A7E8EED3331ECA1D6C58FC /* TinyConstraints */ = {
+		DB19F8358FA0FE83819C9522A4E00D59 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				7D2BF895255A9365BC69CAD063F1C0B4 /* Abstraction.swift */,
-				40A2DF43C3E5A1D1E9A559D9F154D5D4 /* Constrainable.swift */,
-				C09FE24794B2ED4575096B2F66BA5CC9 /* Constraints.swift */,
-				13CF0EFA80D02F8C35745900DA3F45FF /* Stack.swift */,
-				53090B7B9F2DA5A542B6E0B2472A6E8A /* TinyConstraints.swift */,
-				C6C237044053DBA8B68378C6F80F10A1 /* TinyConstraints+superview.swift */,
-				78051CAF65CCFDC2B674F3ABC68C4607 /* TinyEdgeInsets.swift */,
-				66F7B86CE8FCF1C7A66B95E3D03A19DD /* Support Files */,
+				9D9AAC5AF5C1C3BC3778D7C0C29CB1F6 /* TinyConstraints.modulemap */,
+				71B5DAF7A59F49A26F48CD7FE1A02465 /* TinyConstraints-dummy.m */,
+				9AF40FC173A39594E9DEAAEE1714E27A /* TinyConstraints-Info.plist */,
+				24BD3DAB11C04B9842EB91C7B54B4E06 /* TinyConstraints-prefix.pch */,
+				8C85D12C578DDE4B4341479A5BC634C7 /* TinyConstraints-umbrella.h */,
+				E637FBB64FE0FF2AB789D3C12D2D2BB5 /* TinyConstraints.debug.xcconfig */,
+				BE5F0C00E49568BB7953FBEEFE262261 /* TinyConstraints.release.xcconfig */,
 			);
-			name = TinyConstraints;
-			path = TinyConstraints;
+			name = "Support Files";
+			path = "../Target Support Files/TinyConstraints";
+			sourceTree = "<group>";
+		};
+		E2260AD6C781F3D828FC9A40ABC88937 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E678F39E28A25AFC9D4A3A7B3C45143A /* SwiftLint.debug.xcconfig */,
+				272FEC02742A6ADE857F1125AC81EED6 /* SwiftLint.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftLint";
+			sourceTree = "<group>";
+		};
+		F3A9ACE2901DE443A0467D980AB2B665 /* SwiftLint */ = {
+			isa = PBXGroup;
+			children = (
+				E2260AD6C781F3D828FC9A40ABC88937 /* Support Files */,
+			);
+			name = SwiftLint;
+			path = SwiftLint;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		602D1C056531BAE6A785F2774DC65625 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FE10BC8F9F5EDF190E1C1EEE0B94662 /* Pods-xkcd-viewer-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		937FA89DB788F3DED1C2891203890786 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -246,30 +295,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D6D239C22F1A6DC1DCE33C507C62BF7D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E4BE1A36AB2F656E9C7AFCFFAA696CA7 /* Pods-xkcd-viewer-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		2A9B0E7F5BB3ABC498F43C7DC1DF2C24 /* Pods-xkcd-viewer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E00CB55E18A419C51F52DB29727DE97 /* Build configuration list for PBXNativeTarget "Pods-xkcd-viewer" */;
+			buildConfigurationList = C332265081BA94A68AA01AF625FDB98F /* Build configuration list for PBXNativeTarget "Pods-xkcd-viewer" */;
 			buildPhases = (
-				D6D239C22F1A6DC1DCE33C507C62BF7D /* Headers */,
-				D44512B0523C499FC68CC47F0ED6010F /* Sources */,
-				C8429124E9585A2BD46D8B3F77BC8218 /* Frameworks */,
-				A7B0853EEACDD7503A6C041BEF240549 /* Resources */,
+				602D1C056531BAE6A785F2774DC65625 /* Headers */,
+				44FBC2183B16CACE7F140BE6E6740BFA /* Sources */,
+				AAC2C894619FBAF5D892F4E7724FA7E0 /* Frameworks */,
+				C0FC535991D6DCBE56BDA0E44B70C232 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				BC8E36EB223DE3AEA95786E20DC910A4 /* PBXTargetDependency */,
+				B6DB254E4A67DAED5D09C9260E7E12C6 /* PBXTargetDependency */,
+				6D24760C3E704B7B5A306E4EA7AAC888 /* PBXTargetDependency */,
 			);
 			name = "Pods-xkcd-viewer";
 			productName = "Pods-xkcd-viewer";
@@ -323,7 +365,7 @@
 				LastUpgradeCheck = 1100;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -337,6 +379,7 @@
 			targets = (
 				2A9B0E7F5BB3ABC498F43C7DC1DF2C24 /* Pods-xkcd-viewer */,
 				D637C3CE8F1BDE9EFCCEBCF590D7019A /* Pods-xkcd-viewerTests */,
+				52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */,
 				45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */,
 			);
 		};
@@ -357,7 +400,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A7B0853EEACDD7503A6C041BEF240549 /* Resources */ = {
+		C0FC535991D6DCBE56BDA0E44B70C232 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -367,6 +410,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		44FBC2183B16CACE7F140BE6E6740BFA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F628F5EA40B21027613C4BEE3BC6FF66 /* Pods-xkcd-viewer-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		619E27B62EFECADF53D72A64E9D057B0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -390,22 +441,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D44512B0523C499FC68CC47F0ED6010F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D3C74E49A79775A9F69804D9785CF5D9 /* Pods-xkcd-viewer-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		BC8E36EB223DE3AEA95786E20DC910A4 /* PBXTargetDependency */ = {
+		6D24760C3E704B7B5A306E4EA7AAC888 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = TinyConstraints;
 			target = 45C4E325E7851DD54CC3AD44C7A71935 /* TinyConstraints */;
-			targetProxy = BCA3082AB80BEA1547D1DEB7CDA2CCE8 /* PBXContainerItemProxy */;
+			targetProxy = E87A6E35B0667BCD389C3504D04086E5 /* PBXContainerItemProxy */;
+		};
+		B6DB254E4A67DAED5D09C9260E7E12C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftLint;
+			target = 52B60EC2A583F24ACBB69C113F5488B9 /* SwiftLint */;
+			targetProxy = 61C5431178E685DBC3C5B4F4B3A346B0 /* PBXContainerItemProxy */;
 		};
 		C62F87C5DFF4F9E6A2AFD4CE56B60E86 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -416,45 +465,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		07DD9E7C55DA82C7D6D399434CDB18EE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 809832190DAC9B67A3C61A8ECF76CCAD /* Pods-xkcd-viewer.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-xkcd-viewer/Pods-xkcd-viewer-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-xkcd-viewer/Pods-xkcd-viewer.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		131356BE54884448CA49C07BEDF4BB2A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -558,9 +568,25 @@
 			};
 			name = Release;
 		};
+		46EECD2DED30D7C5FE141C0B267C2D3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E678F39E28A25AFC9D4A3A7B3C45143A /* SwiftLint.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
 		5174AF0CBFCB57F6F8E78B901A5387A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E5E27C1634FB36D16B17E42A64881B91 /* TinyConstraints.debug.xcconfig */;
+			baseConfigurationReference = E637FBB64FE0FF2AB789D3C12D2D2BB5 /* TinyConstraints.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -593,9 +619,64 @@
 			};
 			name = Debug;
 		};
+		55DD740115BE746C8DBB7753806D85D5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 272FEC02742A6ADE857F1125AC81EED6 /* SwiftLint.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9D7F2282B804586506E6F0512BFE9AFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1021981FCA74C001A54443C098EDD42B /* Pods-xkcd-viewer.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-xkcd-viewer/Pods-xkcd-viewer-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-xkcd-viewer/Pods-xkcd-viewer.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		BE5B140BFE7F1037F3F2120348C63925 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = BFE2FED9E5E9AC54EDA0E6C44E8B1755 /* TinyConstraints.release.xcconfig */;
+			baseConfigurationReference = BE5F0C00E49568BB7953FBEEFE262261 /* TinyConstraints.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -667,9 +748,9 @@
 			};
 			name = Debug;
 		};
-		CC40B1FEA1E8442DC8A32DF6DB88D53C /* Debug */ = {
+		DF82ABEDCD50EDEF4B27D27AFDE71A0F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1021981FCA74C001A54443C098EDD42B /* Pods-xkcd-viewer.debug.xcconfig */;
+			baseConfigurationReference = 809832190DAC9B67A3C61A8ECF76CCAD /* Pods-xkcd-viewer.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -700,10 +781,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		F090CD07A80273D5A73C8EA19224ADDB /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -777,20 +859,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E00CB55E18A419C51F52DB29727DE97 /* Build configuration list for PBXNativeTarget "Pods-xkcd-viewer" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				CC40B1FEA1E8442DC8A32DF6DB88D53C /* Debug */,
-				07DD9E7C55DA82C7D6D399434CDB18EE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		8CF1D859743D0CF942010B9853664DEB /* Build configuration list for PBXNativeTarget "Pods-xkcd-viewerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C976C358D1C9B98104FCC0D714B4CAD6 /* Debug */,
 				237D5091AD4712B09AFC5B139C17B5CC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE7B4FB01588B9E6DF09CB79FC7CE7BD /* Build configuration list for PBXAggregateTarget "SwiftLint" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				46EECD2DED30D7C5FE141C0B267C2D3F /* Debug */,
+				55DD740115BE746C8DBB7753806D85D5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C332265081BA94A68AA01AF625FDB98F /* Build configuration list for PBXNativeTarget "Pods-xkcd-viewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D7F2282B804586506E6F0512BFE9AFD /* Debug */,
+				DF82ABEDCD50EDEF4B27D27AFDE71A0F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

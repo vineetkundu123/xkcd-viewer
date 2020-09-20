@@ -6,6 +6,7 @@ target 'xkcd-viewer' do
 
   # Pods for xkcd-viewer
   pod 'TinyConstraints'
+  pod 'SwiftLint'
 
   target 'xkcd-viewerTests' do
     inherit! :search_paths
