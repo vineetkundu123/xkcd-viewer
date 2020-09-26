@@ -98,6 +98,14 @@ final class HomeViewController: UIViewController {
         return activityIndicator
     }()
     
+    private lazy var searchBar: UISearchBar = {
+        let searchBar = UISearchBar()
+        searchBar.tintColor = .lightGray
+        searchBar.backgroundColor = .white
+        searchBar.delegate = self
+        return searchBar
+    }()
+    
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) not implemented")
     }
@@ -107,6 +115,7 @@ final class HomeViewController: UIViewController {
         setupView()
         setUpValues()
         setUpViewModelObservers()
+        setUpTapGestureRecogniser()
         viewModel.showLoadingItems()
         viewModel.fetchData()
     }
@@ -124,6 +133,17 @@ final class HomeViewController: UIViewController {
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)
         
+        if viewModel.allowBrowsing {
+            view.addSubview(searchBar)
+            searchBar.topToSuperview(usingSafeArea: true)
+            searchBar.leftToSuperview()
+            searchBar.rightToSuperview()
+            
+            titleLabel.topToBottom(of: searchBar, offset: .single)
+        } else {
+            titleLabel.topToSuperview(offset: .double, usingSafeArea: true)
+        }
+        
         imageView.widthToSuperview()
         imageView.heightToSuperview()
         imageView.centerXToSuperview()
@@ -137,13 +157,12 @@ final class HomeViewController: UIViewController {
         infoButton.width(24.0)
         infoButton.rightToSuperview(offset: -.double, relation: .equalOrLess)
         infoButton.centerY(to: titleLabel)
-        titleLabel.topToSuperview(relation: .equalOrGreater, usingSafeArea: true)
         titleLabel.bottomToTop(of: scrollView, offset: -.single)
         
-        scrollView.centerYToSuperview()
+        scrollView.centerYToSuperview(offset: 2 * .double)
         scrollView.leftToSuperview(offset: .double)
         scrollView.rightToSuperview(offset: -.double)
-        scrollView.height(to: view, multiplier: 0.6)
+        scrollView.height(to: view, multiplier: 0.55)
         
         loadingIndicator.centerXToSuperview()
         loadingIndicator.centerYToSuperview()
@@ -182,8 +201,17 @@ final class HomeViewController: UIViewController {
         nextButton.tag = HomeViewModel.ActionType.next.rawValue
         firstButton.tag = HomeViewModel.ActionType.first.rawValue
         lastButton.tag = HomeViewModel.ActionType.last.rawValue
+        
+        searchBar.placeholder = viewModel.searchPlaceholder
 
         updateButtonStates()
+    }
+    
+    func setUpTapGestureRecogniser() {
+        let tapRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(
+            target: self,
+            action: #selector(self.dismissPresentedKeyboard))
+        view.addGestureRecognizer(tapRecognizer)
     }
     
     func updateButtonStates() {
@@ -269,6 +297,13 @@ extension HomeViewController: UIScrollViewDelegate {
     }
 }
 
+extension HomeViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        dismissPresentedKeyboard()
+        viewModel.searchComic(withText: searchBar.text ?? "")
+    }
+}
+
 // MARK: - Actions
 
 extension HomeViewController {
@@ -282,5 +317,9 @@ extension HomeViewController {
     
     @objc private func infoButtonTapped(_ sender: UIButton) {
         viewModel.loadExplanation()
+    }
+    
+    @objc private func dismissPresentedKeyboard() {
+        searchBar.resignFirstResponder()
     }
 }
