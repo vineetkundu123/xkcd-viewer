@@ -11,6 +11,8 @@ extension UIImage {
 
         case empty_star = "favorite-empty"
         case filled_star = "favorite-filled"
+        
+        case disclosure_indicator = "disclosure-indicator"
      }
     
     convenience init(appImage from: AppImages) {

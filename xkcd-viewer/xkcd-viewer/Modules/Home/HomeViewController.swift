@@ -118,12 +118,6 @@ final class HomeViewController: UIViewController {
         imageView.heightToSuperview()
         imageView.centerXToSuperview()
         imageView.centerYToSuperview()
-
-        view.addSubview(firstButton)
-        view.addSubview(lastButton)
-        view.addSubview(previousButton)
-        view.addSubview(nextButton)
-        
         scrollView.addSubview(loadingIndicator)
         
         titleLabel.leftToSuperview(offset: .double)
@@ -139,22 +133,29 @@ final class HomeViewController: UIViewController {
         loadingIndicator.centerXToSuperview()
         loadingIndicator.centerYToSuperview()
         
-        firstButton.centerY(to: previousButton)
-        firstButton.rightToLeft(of: previousButton, offset: -.single)
-        firstButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
         
-        previousButton.topToBottom(of: scrollView, offset: .double)
-        previousButton.centerXToSuperview(offset: -4 * .double)
-        previousButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
+        if viewModel.allowBrowsing {
+            view.addSubview(firstButton)
+            view.addSubview(lastButton)
+            view.addSubview(previousButton)
+            view.addSubview(nextButton)
+            
+            firstButton.centerY(to: previousButton)
+            firstButton.rightToLeft(of: previousButton, offset: -.single)
+            firstButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
+            
+            previousButton.topToBottom(of: scrollView, offset: .double)
+            previousButton.centerXToSuperview(offset: -4 * .double)
+            previousButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
 
-        nextButton.centerY(to: previousButton)
-        nextButton.centerXToSuperview(offset: 4 * .double)
-        nextButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
+            nextButton.centerY(to: previousButton)
+            nextButton.centerXToSuperview(offset: 4 * .double)
+            nextButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
 
-        lastButton.centerY(to: previousButton)
-        lastButton.leftToRight(of: nextButton, offset: .single)
-        lastButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
-
+            lastButton.centerY(to: previousButton)
+            lastButton.leftToRight(of: nextButton, offset: .single)
+            lastButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
+        }
     }
     
     func setUpValues() {

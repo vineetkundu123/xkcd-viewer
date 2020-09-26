@@ -33,6 +33,8 @@ class HomeViewModel {
     var isFirstStrip: Bool = false
     var isLastStrip: Bool = true
     
+    var allowBrowsing: Bool = true
+    
     //Subscription methods: To be subscribed by view controller
     var updateTitle: ((_ title: String) -> Void)?
     var updateNavTitle: ((_ title: String) -> Void)?
@@ -42,7 +44,11 @@ class HomeViewModel {
     var pushController: ((UIViewController) -> Void)?
     var presentController: ((UIViewController) -> Void)?
     
-    init() {}
+    init(withComicId comicId: String = "",
+         shouldAllowBrowsing allowBrowsing: Bool = true) {
+        self.currentComicId = comicId
+        self.allowBrowsing = allowBrowsing
+    }
     
     func showLoadingItems() {
         updateImage?(UIImage(), true)
@@ -96,12 +102,10 @@ class HomeViewModel {
             self.latestComicId = String(comic.num?.toString() ?? "")
         }
         
-        self.title = NSLocalizedString("home.page.title", comment: "")
-            .replacingOccurrences(of: "[comicNumber]", with: String(comic.num?.toString() ?? ""))
+        self.title = "\(NSLocalizedString("home.page.title", comment: "")) \(String(comic.num?.toString() ?? ""))"
         
         self.updateNavTitle?(self.title)
         self.updateTitle?(comic.title ?? "")
-        
         
         if self.favorites.contains(self.currentComicId) {
             self.updateBarButtonImage?(UIImage(appImage: .filled_star).original)
