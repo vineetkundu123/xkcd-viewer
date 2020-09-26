@@ -11,6 +11,14 @@ final class HomeViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
     }
     
+    private lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.minimumZoomScale = 1.0
+        scrollView.maximumZoomScale = 4.0
+        scrollView.delegate = self
+        return scrollView
+    }()
+    
     private lazy var imageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -99,24 +107,30 @@ final class HomeViewController: UIViewController {
         view.backgroundColor = .white
         
         view.addSubview(titleLabel)
-        view.addSubview(imageView)
+        view.addSubview(scrollView)
+        scrollView.addSubview(imageView)
         
+        imageView.widthToSuperview()
+        imageView.heightToSuperview()
+        imageView.centerXToSuperview()
+        imageView.centerYToSuperview()
+
         view.addSubview(firstButton)
         view.addSubview(lastButton)
         view.addSubview(previousButton)
         view.addSubview(nextButton)
         
-        imageView.addSubview(loadingIndicator)
+        scrollView.addSubview(loadingIndicator)
         
         titleLabel.leftToSuperview(offset: .double)
         titleLabel.rightToSuperview(offset: -.double)
         titleLabel.topToSuperview(relation: .equalOrGreater, usingSafeArea: true)
-        titleLabel.bottomToTop(of: imageView, offset: -.single)
+        titleLabel.bottomToTop(of: scrollView, offset: -.single)
         
-        imageView.centerYToSuperview()
-        imageView.leftToSuperview(offset: .double)
-        imageView.rightToSuperview(offset: -.double)
-        imageView.height(to: view, multiplier: 0.6)
+        scrollView.centerYToSuperview()
+        scrollView.leftToSuperview(offset: .double)
+        scrollView.rightToSuperview(offset: -.double)
+        scrollView.height(to: view, multiplier: 0.6)
         
         loadingIndicator.centerXToSuperview()
         loadingIndicator.centerYToSuperview()
@@ -125,7 +139,7 @@ final class HomeViewController: UIViewController {
         firstButton.rightToLeft(of: previousButton, offset: -.single)
         firstButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
         
-        previousButton.topToBottom(of: imageView, offset: .double)
+        previousButton.topToBottom(of: scrollView, offset: .double)
         previousButton.centerXToSuperview(offset: -4 * .double)
         previousButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
 
@@ -185,6 +199,9 @@ final class HomeViewController: UIViewController {
                 } else {
                     self.loadingIndicator.startAnimating()
                 }
+                //Reset zoom on scrollview
+                self.scrollView.setZoomScale(1.0, animated: false)
+                //Set image
                 self.imageView.image = image
             }
         }
@@ -209,6 +226,13 @@ final class HomeViewController: UIViewController {
                 self.present(controller, animated: true, completion: nil)
             }
         }
+    }
+}
+
+// MARK: - Delegates
+extension HomeViewController: UIScrollViewDelegate {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
+        return imageView
     }
 }
 
