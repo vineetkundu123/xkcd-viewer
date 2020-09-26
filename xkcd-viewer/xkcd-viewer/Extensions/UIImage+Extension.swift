@@ -13,6 +13,7 @@ extension UIImage {
         case filled_star = "favorite-filled"
         
         case disclosure_indicator = "disclosure-indicator"
+        case info_icon = "info-icon"
      }
     
     convenience init(appImage from: AppImages) {

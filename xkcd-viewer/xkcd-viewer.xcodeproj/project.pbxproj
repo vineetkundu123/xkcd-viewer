@@ -11,6 +11,7 @@
 		5B41203A251F52A3004DE325 /* UserDefaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B412039251F52A3004DE325 /* UserDefaults+Keys.swift */; };
 		5B41203C251F5726004DE325 /* UITableView+register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B41203B251F5726004DE325 /* UITableView+register.swift */; };
 		5B41203F251F58D9004DE325 /* FavoriteComicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B41203E251F58D9004DE325 /* FavoriteComicCell.swift */; };
+		5B412041251F672C004DE325 /* UIViewController+SafariController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B412040251F672C004DE325 /* UIViewController+SafariController.swift */; };
 		5B99C5292517925300C08C2C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C5282517925300C08C2C /* HomeViewModel.swift */; };
 		5B99C52C2517926B00C08C2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C52B2517926B00C08C2C /* HomeViewController.swift */; };
 		5B99C530251795FA00C08C2C /* CGFloat+AppMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C52F251795FA00C08C2C /* CGFloat+AppMargin.swift */; };
@@ -58,6 +59,7 @@
 		5B412039251F52A3004DE325 /* UserDefaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Keys.swift"; sourceTree = "<group>"; };
 		5B41203B251F5726004DE325 /* UITableView+register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+register.swift"; sourceTree = "<group>"; };
 		5B41203E251F58D9004DE325 /* FavoriteComicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteComicCell.swift; sourceTree = "<group>"; };
+		5B412040251F672C004DE325 /* UIViewController+SafariController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SafariController.swift"; sourceTree = "<group>"; };
 		5B99C5282517925300C08C2C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5B99C52B2517926B00C08C2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5B99C52F251795FA00C08C2C /* CGFloat+AppMargin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+AppMargin.swift"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				5B99C5472517DC3400C08C2C /* UIImage+Extension.swift */,
 				5B412039251F52A3004DE325 /* UserDefaults+Keys.swift */,
 				5B41203B251F5726004DE325 /* UITableView+register.swift */,
+				5B412040251F672C004DE325 /* UIViewController+SafariController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -517,6 +520,7 @@
 				5B99C5412517D98900C08C2C /* GenericTabbarViewController.swift in Sources */,
 				5B99C5292517925300C08C2C /* HomeViewModel.swift in Sources */,
 				5BC5239025175DA200E8F65C /* URLParameterEncoding.swift in Sources */,
+				5B412041251F672C004DE325 /* UIViewController+SafariController.swift in Sources */,
 				5B99C5482517DC3400C08C2C /* UIImage+Extension.swift in Sources */,
 				5B99C53C2517D69600C08C2C /* Double+toString.swift in Sources */,
 				5B99C5462517DA3E00C08C2C /* FavoritesViewController.swift in Sources */,
