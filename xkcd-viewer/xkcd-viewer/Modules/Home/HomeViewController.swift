@@ -133,7 +133,6 @@ final class HomeViewController: UIViewController {
         loadingIndicator.centerXToSuperview()
         loadingIndicator.centerYToSuperview()
         
-        
         if viewModel.allowBrowsing {
             view.addSubview(firstButton)
             view.addSubview(lastButton)
