@@ -43,6 +43,7 @@ class HomeViewModel {
     var updateButtonState: (() -> Void)?
     var pushController: ((UIViewController) -> Void)?
     var presentController: ((UIViewController) -> Void)?
+    var loadSafariController: ((URL) -> Void)?
     
     init(withComicId comicId: String = "",
          shouldAllowBrowsing allowBrowsing: Bool = true) {
@@ -152,5 +153,11 @@ extension HomeViewModel {
             self.updateBarButtonImage?(UIImage(appImage: .filled_star).original)
         }
         UserDefaults.standard.setFavorites(newFavorites)
+    }
+    
+    func loadExplanation() {
+        if let url = URL(string: Constants.Comic.explanationURLPrefix + currentComicId) {
+            loadSafariController?(url)
+        }
     }
 }

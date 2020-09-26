@@ -1,6 +1,7 @@
 import Foundation
 import TinyConstraints
 import UIKit
+import SafariServices
 
 final class HomeViewController: UIViewController {
     let viewModel: HomeViewModel
@@ -35,6 +36,14 @@ final class HomeViewController: UIViewController {
         label.numberOfLines = 0
         label.backgroundColor = .clear
         return label
+    }()
+    
+    private lazy var infoButton: UIButton = {
+        let button = UIButton()
+        button.setImage(UIImage(appImage: .info_icon).template, for: .normal)
+        button.tintColor = .black
+        button.addTarget(self, action: #selector(infoButtonTapped(_:)), for: .touchUpInside)
+        return button
     }()
     
     private lazy var previousButton: UIButton = {
@@ -111,6 +120,7 @@ final class HomeViewController: UIViewController {
         view.backgroundColor = .white
         
         view.addSubview(titleLabel)
+        view.addSubview(infoButton)
         view.addSubview(scrollView)
         scrollView.addSubview(imageView)
         
@@ -120,8 +130,13 @@ final class HomeViewController: UIViewController {
         imageView.centerYToSuperview()
         scrollView.addSubview(loadingIndicator)
         
-        titleLabel.leftToSuperview(offset: .double)
-        titleLabel.rightToSuperview(offset: -.double)
+        titleLabel.leftToSuperview(offset: .double, relation: .equalOrGreater)
+        titleLabel.rightToLeft(of: infoButton, offset: -.single)
+        titleLabel.centerXToSuperview()
+        infoButton.height(24.0)
+        infoButton.width(24.0)
+        infoButton.rightToSuperview(offset: -.double, relation: .equalOrLess)
+        infoButton.centerY(to: titleLabel)
         titleLabel.topToSuperview(relation: .equalOrGreater, usingSafeArea: true)
         titleLabel.bottomToTop(of: scrollView, offset: -.single)
         
@@ -237,6 +252,13 @@ final class HomeViewController: UIViewController {
                 self.present(controller, animated: true, completion: nil)
             }
         }
+        
+        viewModel.loadSafariController = {[weak self] url in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.loadSafariController(withUrl: url)
+            }
+        }
     }
 }
 
@@ -256,5 +278,9 @@ extension HomeViewController {
     
     @objc func rightBarButtonTapped() {
         viewModel.addOrRemoveFavorite()
+    }
+    
+    @objc private func infoButtonTapped(_ sender: UIButton) {
+        viewModel.loadExplanation()
     }
 }

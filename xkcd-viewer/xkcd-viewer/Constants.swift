@@ -7,5 +7,6 @@ struct Constants {
     }
     struct Comic {
         static let firstComicId = "1"
+        static let explanationURLPrefix = "https://www.explainxkcd.com/wiki/index.php/"
     }
 }
