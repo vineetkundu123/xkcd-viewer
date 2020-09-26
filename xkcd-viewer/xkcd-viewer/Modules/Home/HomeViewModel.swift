@@ -111,7 +111,7 @@ extension HomeViewModel {
         }
         switch type {
         case .first:
-            currentComicId = "1"
+            currentComicId = Constants.Comic.firstComicId
         case .last:
             currentComicId = latestComicId
         case .next:
@@ -120,7 +120,7 @@ extension HomeViewModel {
             currentComicId = String((Int(currentComicId) ?? 2) - 1)
         }
         
-        isFirstStrip = (currentComicId == "1")
+        isFirstStrip = (currentComicId == Constants.Comic.firstComicId)
         isLastStrip = (currentComicId == latestComicId)
         
         fetchData()
