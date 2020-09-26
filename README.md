@@ -24,7 +24,7 @@ TinyConstraints is the syntactic sugar that makes Auto Layout sweeter for human 
 https://github.com/roberthein/TinyConstraints
 
 
-## Assumptions
+## Completed Features
 
 ### User
 
