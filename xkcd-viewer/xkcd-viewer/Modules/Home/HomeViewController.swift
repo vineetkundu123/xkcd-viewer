@@ -104,6 +104,10 @@ final class HomeViewController: UIViewController {
     
     private func setupView() {
         self.title = viewModel.title
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(appImage: .empty_star).original,
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(rightBarButtonTapped))
         view.backgroundColor = .white
         
         view.addSubview(titleLabel)
@@ -206,6 +210,13 @@ final class HomeViewController: UIViewController {
             }
         }
         
+        viewModel.updateBarButtonImage = {[weak self] image in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.navigationItem.rightBarButtonItem?.image = image
+            }
+        }
+        
         viewModel.updateButtonState = {[weak self] in
             guard let self = self else { return }
             DispatchQueue.main.async {
@@ -241,5 +252,9 @@ extension HomeViewController: UIScrollViewDelegate {
 extension HomeViewController {
     @objc private func buttonTapped(_ sender: UIButton) {
         viewModel.handleUserInteraction(withActionType: HomeViewModel.ActionType.init(rawValue: sender.tag))
+    }
+    
+    @objc func rightBarButtonTapped() {
+        viewModel.addOrRemoveFavorite()
     }
 }
