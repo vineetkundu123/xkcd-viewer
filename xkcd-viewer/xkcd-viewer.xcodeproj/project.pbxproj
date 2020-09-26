@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0DE429F5BC54CEBA1C1BB942 /* Pods_xkcd_viewer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D74993DD631DFBEC54DE7AC /* Pods_xkcd_viewer.framework */; };
+		5B41203A251F52A3004DE325 /* UserDefaults+Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B412039251F52A3004DE325 /* UserDefaults+Keys.swift */; };
+		5B41203C251F5726004DE325 /* UITableView+register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B41203B251F5726004DE325 /* UITableView+register.swift */; };
+		5B41203F251F58D9004DE325 /* FavoriteComicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B41203E251F58D9004DE325 /* FavoriteComicCell.swift */; };
 		5B99C5292517925300C08C2C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C5282517925300C08C2C /* HomeViewModel.swift */; };
 		5B99C52C2517926B00C08C2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C52B2517926B00C08C2C /* HomeViewController.swift */; };
 		5B99C530251795FA00C08C2C /* CGFloat+AppMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C52F251795FA00C08C2C /* CGFloat+AppMargin.swift */; };
@@ -52,6 +55,9 @@
 		36B4BC045B657B3936F98A91 /* Pods_xkcd_viewerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_xkcd_viewerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		507D9C74AA3620CD38C4A6FC /* Pods-xkcd-viewer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xkcd-viewer.release.xcconfig"; path = "Target Support Files/Pods-xkcd-viewer/Pods-xkcd-viewer.release.xcconfig"; sourceTree = "<group>"; };
 		51F0BC56EDB6B843EFF68BAE /* Pods-xkcd-viewer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-xkcd-viewer.debug.xcconfig"; path = "Target Support Files/Pods-xkcd-viewer/Pods-xkcd-viewer.debug.xcconfig"; sourceTree = "<group>"; };
+		5B412039251F52A3004DE325 /* UserDefaults+Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Keys.swift"; sourceTree = "<group>"; };
+		5B41203B251F5726004DE325 /* UITableView+register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+register.swift"; sourceTree = "<group>"; };
+		5B41203E251F58D9004DE325 /* FavoriteComicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteComicCell.swift; sourceTree = "<group>"; };
 		5B99C5282517925300C08C2C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5B99C52B2517926B00C08C2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5B99C52F251795FA00C08C2C /* CGFloat+AppMargin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+AppMargin.swift"; sourceTree = "<group>"; };
@@ -109,6 +115,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B41203D251F58B9004DE325 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				5B41203E251F58D9004DE325 /* FavoriteComicCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		5B99C5272517922500C08C2C /* Modules */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +148,8 @@
 				5B99C52F251795FA00C08C2C /* CGFloat+AppMargin.swift */,
 				5B99C53B2517D69600C08C2C /* Double+toString.swift */,
 				5B99C5472517DC3400C08C2C /* UIImage+Extension.swift */,
+				5B412039251F52A3004DE325 /* UserDefaults+Keys.swift */,
+				5B41203B251F5726004DE325 /* UITableView+register.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -159,6 +175,7 @@
 			children = (
 				5B99C5432517DA2F00C08C2C /* FavoritesViewModel.swift */,
 				5B99C5452517DA3E00C08C2C /* FavoritesViewController.swift */,
+				5B41203D251F58B9004DE325 /* Components */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -488,12 +505,15 @@
 				5BC5238625175B7600E8F65C /* HTTPTask.swift in Sources */,
 				5BC5238F25175DA200E8F65C /* ParameterEncoding.swift in Sources */,
 				5BC5238725175B7600E8F65C /* HTTPMethod.swift in Sources */,
+				5B41203F251F58D9004DE325 /* FavoriteComicCell.swift in Sources */,
 				5B99C52C2517926B00C08C2C /* HomeViewController.swift in Sources */,
 				5BC5238A25175B7600E8F65C /* APIManager.swift in Sources */,
 				5BC5238825175B7600E8F65C /* Router.swift in Sources */,
 				5BC52396251760D500E8F65C /* Constants.swift in Sources */,
 				5BC5238925175B7600E8F65C /* NetworkManager.swift in Sources */,
+				5B41203A251F52A3004DE325 /* UserDefaults+Keys.swift in Sources */,
 				5B99C5442517DA2F00C08C2C /* FavoritesViewModel.swift in Sources */,
+				5B41203C251F5726004DE325 /* UITableView+register.swift in Sources */,
 				5B99C5412517D98900C08C2C /* GenericTabbarViewController.swift in Sources */,
 				5B99C5292517925300C08C2C /* HomeViewModel.swift in Sources */,
 				5BC5239025175DA200E8F65C /* URLParameterEncoding.swift in Sources */,

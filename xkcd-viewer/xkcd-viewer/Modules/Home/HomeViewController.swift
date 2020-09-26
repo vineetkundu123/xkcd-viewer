@@ -104,6 +104,10 @@ final class HomeViewController: UIViewController {
     
     private func setupView() {
         self.title = viewModel.title
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(appImage: .empty_star).original,
+                                                            style: .plain,
+                                                            target: self,
+                                                            action: #selector(rightBarButtonTapped))
         view.backgroundColor = .white
         
         view.addSubview(titleLabel)
@@ -114,12 +118,6 @@ final class HomeViewController: UIViewController {
         imageView.heightToSuperview()
         imageView.centerXToSuperview()
         imageView.centerYToSuperview()
-
-        view.addSubview(firstButton)
-        view.addSubview(lastButton)
-        view.addSubview(previousButton)
-        view.addSubview(nextButton)
-        
         scrollView.addSubview(loadingIndicator)
         
         titleLabel.leftToSuperview(offset: .double)
@@ -135,22 +133,29 @@ final class HomeViewController: UIViewController {
         loadingIndicator.centerXToSuperview()
         loadingIndicator.centerYToSuperview()
         
-        firstButton.centerY(to: previousButton)
-        firstButton.rightToLeft(of: previousButton, offset: -.single)
-        firstButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
         
-        previousButton.topToBottom(of: scrollView, offset: .double)
-        previousButton.centerXToSuperview(offset: -4 * .double)
-        previousButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
+        if viewModel.allowBrowsing {
+            view.addSubview(firstButton)
+            view.addSubview(lastButton)
+            view.addSubview(previousButton)
+            view.addSubview(nextButton)
+            
+            firstButton.centerY(to: previousButton)
+            firstButton.rightToLeft(of: previousButton, offset: -.single)
+            firstButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
+            
+            previousButton.topToBottom(of: scrollView, offset: .double)
+            previousButton.centerXToSuperview(offset: -4 * .double)
+            previousButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
 
-        nextButton.centerY(to: previousButton)
-        nextButton.centerXToSuperview(offset: 4 * .double)
-        nextButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
+            nextButton.centerY(to: previousButton)
+            nextButton.centerXToSuperview(offset: 4 * .double)
+            nextButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
 
-        lastButton.centerY(to: previousButton)
-        lastButton.leftToRight(of: nextButton, offset: .single)
-        lastButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
-
+            lastButton.centerY(to: previousButton)
+            lastButton.leftToRight(of: nextButton, offset: .single)
+            lastButton.titleLabel?.edgesToSuperview(insets: TinyEdgeInsets(top: .single, left: .single, bottom: .single, right: .single))
+        }
     }
     
     func setUpValues() {
@@ -206,6 +211,13 @@ final class HomeViewController: UIViewController {
             }
         }
         
+        viewModel.updateBarButtonImage = {[weak self] image in
+            guard let self = self else { return }
+            DispatchQueue.main.async {
+                self.navigationItem.rightBarButtonItem?.image = image
+            }
+        }
+        
         viewModel.updateButtonState = {[weak self] in
             guard let self = self else { return }
             DispatchQueue.main.async {
@@ -241,5 +253,9 @@ extension HomeViewController: UIScrollViewDelegate {
 extension HomeViewController {
     @objc private func buttonTapped(_ sender: UIButton) {
         viewModel.handleUserInteraction(withActionType: HomeViewModel.ActionType.init(rawValue: sender.tag))
+    }
+    
+    @objc func rightBarButtonTapped() {
+        viewModel.addOrRemoveFavorite()
     }
 }

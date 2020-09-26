@@ -17,6 +17,10 @@ class HomeViewModel {
         }
     }
     
+    private var favorites: [String] {
+        return UserDefaults.standard.getFavorites()
+    }
+    
     var title = NSLocalizedString("home.page.title", comment: "").replacingOccurrences(of: " #[comicNumber]", with: "")
     var nextButtonTitle = NSLocalizedString("next.button.title", comment: "")
     var previousButtonTitle = NSLocalizedString("previous.button.title", comment: "")
@@ -29,15 +33,22 @@ class HomeViewModel {
     var isFirstStrip: Bool = false
     var isLastStrip: Bool = true
     
+    var allowBrowsing: Bool = true
+    
     //Subscription methods: To be subscribed by view controller
     var updateTitle: ((_ title: String) -> Void)?
     var updateNavTitle: ((_ title: String) -> Void)?
+    var updateBarButtonImage: ((_ image: UIImage) -> Void)?
     var updateImage: ((_ image: UIImage, _ loading: Bool) -> Void)?
     var updateButtonState: (() -> Void)?
     var pushController: ((UIViewController) -> Void)?
     var presentController: ((UIViewController) -> Void)?
     
-    init() {}
+    init(withComicId comicId: String = "",
+         shouldAllowBrowsing allowBrowsing: Bool = true) {
+        self.currentComicId = comicId
+        self.allowBrowsing = allowBrowsing
+    }
     
     func showLoadingItems() {
         updateImage?(UIImage(), true)
@@ -91,11 +102,16 @@ class HomeViewModel {
             self.latestComicId = String(comic.num?.toString() ?? "")
         }
         
-        self.title = NSLocalizedString("home.page.title", comment: "")
-            .replacingOccurrences(of: "[comicNumber]", with: String(comic.num?.toString() ?? ""))
+        self.title = "\(NSLocalizedString("home.page.title", comment: "")) \(String(comic.num?.toString() ?? ""))"
         
         self.updateNavTitle?(self.title)
         self.updateTitle?(comic.title ?? "")
+        
+        if self.favorites.contains(self.currentComicId) {
+            self.updateBarButtonImage?(UIImage(appImage: .filled_star).original)
+        } else {
+            self.updateBarButtonImage?(UIImage(appImage: .empty_star).original)
+        }
         
         self.updateButtonState?()
     }
@@ -111,7 +127,7 @@ extension HomeViewModel {
         }
         switch type {
         case .first:
-            currentComicId = "1"
+            currentComicId = Constants.Comic.firstComicId
         case .last:
             currentComicId = latestComicId
         case .next:
@@ -120,9 +136,21 @@ extension HomeViewModel {
             currentComicId = String((Int(currentComicId) ?? 2) - 1)
         }
         
-        isFirstStrip = (currentComicId == "1")
+        isFirstStrip = (currentComicId == Constants.Comic.firstComicId)
         isLastStrip = (currentComicId == latestComicId)
         
         fetchData()
+    }
+    
+    func addOrRemoveFavorite() {
+        var newFavorites = favorites
+        if self.favorites.contains(currentComicId) {
+            newFavorites.removeAll { $0 == currentComicId }
+            self.updateBarButtonImage?(UIImage(appImage: .empty_star).original)
+        } else {
+            newFavorites.append(currentComicId)
+            self.updateBarButtonImage?(UIImage(appImage: .filled_star).original)
+        }
+        UserDefaults.standard.setFavorites(newFavorites)
     }
 }

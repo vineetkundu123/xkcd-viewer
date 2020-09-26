@@ -9,8 +9,10 @@ extension UIImage {
         case favorites_tab_active = "favorites-tab-active"
         case favorites_tab_inactive = "favorites-tab-inactive"
 
-        case empty_star = "empty-star"
-        case filled_star = "filled-star"
+        case empty_star = "favorite-empty"
+        case filled_star = "favorite-filled"
+        
+        case disclosure_indicator = "disclosure-indicator"
      }
     
     convenience init(appImage from: AppImages) {
