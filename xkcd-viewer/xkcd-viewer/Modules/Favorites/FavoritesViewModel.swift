@@ -14,18 +14,18 @@ class FavoritesViewModel {
     var pushController: ((UIViewController) -> Void)?
     var refreshFavorites: (() -> Void)?
     
-    var favorites: [String] {
-        return UserDefaults.standard.getFavorites()
-    }
+    private let comicStorageService = StorageService(fileName: Constants.Comic.storageFileName)
+    var favoriteComics: [Comic]?
     
     var favoriteItems: [FavoriteItem] = []
     
     init() {}
     
     func updateFavorites() {
+        favoriteComics = comicStorageService.fetch()
         favoriteItems.removeAll()
-        favorites.forEach({ favorite in
-            favoriteItems.append(FavoriteItem(title: "\(NSLocalizedString("home.page.title", comment: "")) \(favorite)"))
+        favoriteComics?.forEach({ favorite in
+            favoriteItems.append(FavoriteItem(title: "\(NSLocalizedString("home.page.title", comment: "")) \(favorite.num?.toString() ?? "")"))
         })
         refreshFavorites?()
     }
@@ -35,7 +35,7 @@ class FavoritesViewModel {
 
 extension FavoritesViewModel {
     func loadComicDetails(atIndex index: Int) {
-        let homeViewModel = HomeViewModel(withComicId: favorites[index], shouldAllowBrowsing: false)
+        let homeViewModel = HomeViewModel(withComicId: favoriteComics?[index].num?.toString() ?? "", shouldAllowBrowsing: false)
         let homeViewController = HomeViewController(viewModel: homeViewModel)
         pushController?(homeViewController)
     }
