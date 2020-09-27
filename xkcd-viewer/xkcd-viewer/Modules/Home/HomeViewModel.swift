@@ -12,7 +12,7 @@ class HomeViewModel {
     
     private let comicStorageService = StorageService(fileName: Constants.Comic.storageFileName)
     
-    private var apiManager = APIManager()
+    private var apiManager: APIManager
     private var comic: Comic?
     
     private var favoriteComics: [Comic]?
@@ -43,9 +43,11 @@ class HomeViewModel {
     var loadSafariController: ((URL) -> Void)?
     
     init(withComicId comicId: String = "",
-         shouldAllowBrowsing allowBrowsing: Bool = true) {
+         shouldAllowBrowsing allowBrowsing: Bool = true,
+         withAPIManager apiManager: APIManager = APIManager()) {
         self.currentComicId = comicId
         self.allowBrowsing = allowBrowsing
+        self.apiManager = apiManager
         self.favoriteComics = comicStorageService.fetch()
     }
     

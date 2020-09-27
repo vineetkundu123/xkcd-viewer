@@ -8,10 +8,11 @@ class HomeViewModelTests: XCTestCase {
     var viewModel: HomeViewModel!
     var apiManager: MockAPIManager!
     let storageService: StorageService = StorageService(fileName: Constants.Comic.storageFileName)
-
+    
     override func setUpWithError() throws {
         Constants.Mode.appMode = .mock
-        viewModel = HomeViewModel()
+        apiManager = MockAPIManager()
+        viewModel = HomeViewModel(withAPIManager: apiManager)
     }
     
     override func tearDownWithError() throws {
@@ -27,6 +28,7 @@ class HomeViewModelTests: XCTestCase {
         
         viewModel.fetchData()
         
+        XCTAssertEqual(1, apiManager.fetchComicCalledTimes)
         XCTAssertEqual(viewModel.currentComicId, "2364")
         XCTAssertEqual(viewModel.latestComicId, "2364")
         XCTAssertEqual(viewModel.title, "Comic # 2364")
@@ -38,7 +40,7 @@ class HomeViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel.title, "")
         
         viewModel.fetchData()
-    
+        
         XCTAssertEqual(viewModel.title, "Comic # 100")
     }
     
@@ -48,9 +50,9 @@ class HomeViewModelTests: XCTestCase {
         viewModel.fetchData()
         
         XCTAssertEqual(viewModel.title, "Comic # 2364")
-
+        
         viewModel.searchComic(withText: "100")
-            
+        
         XCTAssertEqual(viewModel.title, "Comic # 100")
     }
     
@@ -67,7 +69,7 @@ class HomeViewModelTests: XCTestCase {
         
         viewModel.searchComic(withText: "100")
         XCTAssertEqual(viewModel.title, "Comic # 100")
-
+        
     }
     
     func test_handleBrowsing_UserInteraction() {
@@ -91,9 +93,9 @@ class HomeViewModelTests: XCTestCase {
         viewModel = HomeViewModel(withComicId: "100")
         viewModel.fetchData()
         XCTAssertEqual(viewModel.title, "Comic # 100")
-
+        
         var favorites: [Comic]? = storageService.fetch()
-
+        
         if favorites?.contains(where: { $0.num?.toString() == "100" }) ?? false {
             //Comic found - remove comic
             viewModel.addOrRemoveFavorite()

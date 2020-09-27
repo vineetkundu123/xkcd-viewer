@@ -14,11 +14,10 @@
 		5B41204425209783004DE325 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B41204325209783004DE325 /* StorageService.swift */; };
 		5B4120472520AA04004DE325 /* MockAPIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4120462520AA04004DE325 /* MockAPIManager.swift */; };
 		5B41204A2520AB3D004DE325 /* CurrentComic.json in Sources */ = {isa = PBXBuildFile; fileRef = 5B4120492520AB3D004DE325 /* CurrentComic.json */; };
-		5B41204C2520AB85004DE325 /* Comic_100.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B41204B2520AB85004DE325 /* Comic_100.json */; };
-		5B41204D2520AF46004DE325 /* CurrentComic.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B4120492520AB3D004DE325 /* CurrentComic.json */; };
-		5B41204E2520AF4A004DE325 /* Comic_100.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B41204B2520AB85004DE325 /* Comic_100.json */; };
 		5B4120522520B1EC004DE325 /* HomeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4120512520B1EC004DE325 /* HomeViewModelTests.swift */; };
 		5B4120552520B2EC004DE325 /* FavoritesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B4120542520B2EC004DE325 /* FavoritesViewModelTests.swift */; };
+		5B41205B2520C979004DE325 /* CurrentComic.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B4120592520C979004DE325 /* CurrentComic.json */; };
+		5B41205C2520C979004DE325 /* Comic_100.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B41205A2520C979004DE325 /* Comic_100.json */; };
 		5B99C5292517925300C08C2C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C5282517925300C08C2C /* HomeViewModel.swift */; };
 		5B99C52C2517926B00C08C2C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C52B2517926B00C08C2C /* HomeViewController.swift */; };
 		5B99C530251795FA00C08C2C /* CGFloat+AppMargin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B99C52F251795FA00C08C2C /* CGFloat+AppMargin.swift */; };
@@ -71,6 +70,8 @@
 		5B41204B2520AB85004DE325 /* Comic_100.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Comic_100.json; sourceTree = "<group>"; };
 		5B4120512520B1EC004DE325 /* HomeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModelTests.swift; sourceTree = "<group>"; };
 		5B4120542520B2EC004DE325 /* FavoritesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewModelTests.swift; sourceTree = "<group>"; };
+		5B4120592520C979004DE325 /* CurrentComic.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CurrentComic.json; sourceTree = "<group>"; };
+		5B41205A2520C979004DE325 /* Comic_100.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Comic_100.json; sourceTree = "<group>"; };
 		5B99C5282517925300C08C2C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		5B99C52B2517926B00C08C2C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5B99C52F251795FA00C08C2C /* CGFloat+AppMargin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+AppMargin.swift"; sourceTree = "<group>"; };
@@ -151,20 +152,11 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
-		5B4120482520AAEC004DE325 /* Stubs */ = {
-			isa = PBXGroup;
-			children = (
-				5B4120492520AB3D004DE325 /* CurrentComic.json */,
-				5B41204B2520AB85004DE325 /* Comic_100.json */,
-			);
-			path = Stubs;
-			sourceTree = "<group>";
-		};
 		5B41204F2520B1BB004DE325 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				5B4120532520B2D5004DE325 /* Favorites */,
 				5B4120502520B1CA004DE325 /* Home */,
+				5B4120532520B2D5004DE325 /* Favorites */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -183,6 +175,24 @@
 				5B4120542520B2EC004DE325 /* FavoritesViewModelTests.swift */,
 			);
 			path = Favorites;
+			sourceTree = "<group>";
+		};
+		5B4120562520C8EF004DE325 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+				5B4120492520AB3D004DE325 /* CurrentComic.json */,
+				5B41204B2520AB85004DE325 /* Comic_100.json */,
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		5B4120582520C979004DE325 /* Stubs */ = {
+			isa = PBXGroup;
+			children = (
+				5B4120592520C979004DE325 /* CurrentComic.json */,
+				5B41205A2520C979004DE325 /* Comic_100.json */,
+			);
+			path = Stubs;
 			sourceTree = "<group>";
 		};
 		5B99C5272517922500C08C2C /* Modules */ = {
@@ -219,7 +229,7 @@
 		5B99C5332517B87500C08C2C /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				5B4120482520AAEC004DE325 /* Stubs */,
+				5B4120582520C979004DE325 /* Stubs */,
 				5B99C5382517B89300C08C2C /* Localizable.strings */,
 			);
 			path = Resources;
@@ -252,6 +262,7 @@
 				ADD23D717FD6D69FA9D39984 /* Pods */,
 				96DBF48A7CD489353C26A2AF /* Frameworks */,
 				5BC5236F251757BD00E8F65C /* .swiftlint.yml */,
+				5B4120562520C8EF004DE325 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -466,8 +477,8 @@
 				5B99C5362517B89300C08C2C /* Localizable.strings in Resources */,
 				5BC5234D25174B0000E8F65C /* LaunchScreen.storyboard in Resources */,
 				5BC5234A25174B0000E8F65C /* Assets.xcassets in Resources */,
-				5B41204D2520AF46004DE325 /* CurrentComic.json in Resources */,
-				5B41204E2520AF4A004DE325 /* Comic_100.json in Resources */,
+				5B41205B2520C979004DE325 /* CurrentComic.json in Resources */,
+				5B41205C2520C979004DE325 /* Comic_100.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -476,7 +487,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BC52371251757BD00E8F65C /* .swiftlint.yml in Resources */,
-				5B41204C2520AB85004DE325 /* Comic_100.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
