@@ -10,18 +10,14 @@ class HomeViewModel {
         case last
     }
     
+    private let comicStorageService = StorageService(fileName: Constants.Comic.storageFileName)
+    
     private var apiManager = APIManager()
-    private var comic: Comic? {
-        didSet {
-            fetchComicStrip()
-        }
-    }
+    private var comic: Comic?
     
-    private var favorites: [String] {
-        return UserDefaults.standard.getFavorites()
-    }
+    private var favoriteComics: [Comic]?
     
-    var title = NSLocalizedString("home.page.title", comment: "").replacingOccurrences(of: " #[comicNumber]", with: "")
+    var title = ""
     var nextButtonTitle = NSLocalizedString("next.button.title", comment: "")
     var previousButtonTitle = NSLocalizedString("previous.button.title", comment: "")
     var firstButtonTitle = NSLocalizedString("first.button.title", comment: "")
@@ -29,7 +25,7 @@ class HomeViewModel {
     var searchPlaceholder = NSLocalizedString("search.bar.placeholder", comment: "")
 
     var latestComicId: String = ""
-    var currentComicId: String = ""
+    var currentComicId: String
     
     var isFirstStrip: Bool = false
     var isLastStrip: Bool = true
@@ -50,6 +46,7 @@ class HomeViewModel {
          shouldAllowBrowsing allowBrowsing: Bool = true) {
         self.currentComicId = comicId
         self.allowBrowsing = allowBrowsing
+        self.favoriteComics = comicStorageService.fetch()
     }
     
     func showLoadingItems() {
@@ -57,29 +54,40 @@ class HomeViewModel {
     }
     
     func fetchData() {
-        self.updateImage?(UIImage(), true)
-        apiManager.fetchComic(withId: currentComicId, completion: {[weak self] comic, error in
-            guard let self = self else { return }
-            guard let comic = comic, error == nil else {
-                //TODO: Handle error fetching comic strip here - may be show an error image
-                self.updateImage?(UIImage(), false)
-                return
-            }
-            self.comic = comic
+        if let favoriteComic = favoriteComics?.first(where: {$0.num?.toString() == currentComicId}) {
+            //If comic is stored use the stored comic
+            self.comic = favoriteComic
             self.updateFlagsAndValues()
-        })
+        } else {
+            self.updateImage?(UIImage(), true)
+            apiManager.fetchComic(withId: currentComicId, completion: {[weak self] comic, error in
+                guard let self = self else { return }
+                guard let comic = comic, error == nil else {
+                    //TODO: Handle error fetching comic strip here - may be show an error image
+                    self.comic = nil
+                    self.updateImage?(UIImage(), false)
+                    self.updateTitle?("")
+                    self.updateNavTitle?("")
+                    return
+                }
+                self.comic = comic
+                self.updateFlagsAndValues()
+                self.fetchComicStrip()
+            })
+        }
     }
     
     private func fetchComicStrip() {
         if let comicStripUrl = comic?.img {
             apiManager.fetchComicStrip(fromUrl: comicStripUrl, completion: {[weak self] cover, error in
                 guard let self = self else { return }
-                    guard let imageData = cover, let image = UIImage(data: imageData), error == nil else {
-                        //TODO: Handle error fetching comic strip here - may be show an error image
-                        self.updateImage?(UIImage(), false)
-                        return
-                    }
-                    self.updateImage?(image, false)
+                guard let imageData = cover, let image = UIImage(data: imageData), error == nil else {
+                    //TODO: Handle error fetching comic strip here - may be show an error image
+                    self.updateImage?(UIImage(), false)
+                    return
+                }
+                self.comic?.imageData = image.pngData()
+                self.updateImage?(image, false)
             })
         }
     }
@@ -105,17 +113,27 @@ class HomeViewModel {
             self.latestComicId = String(comic.num?.toString() ?? "")
         }
         
-        self.title = "\(NSLocalizedString("home.page.title", comment: "")) \(String(comic.num?.toString() ?? ""))"
-        
+        //Update nav title
+        self.title = "\(NSLocalizedString("home.page.title", comment: "")) \(currentComicId)"
         self.updateNavTitle?(self.title)
+
+        //Update image
+        if let imageData = self.comic?.imageData {
+            self.updateImage?(UIImage(data: imageData) ?? UIImage(), false)
+        }
+        
+        //Update title
         self.updateTitle?(comic.title ?? "")
         
-        if self.favorites.contains(self.currentComicId) {
+        
+        //Manage Favorite icon
+        if self.favoriteComics?.contains(where: {$0.num?.toString() == currentComicId}) ?? false {
             self.updateBarButtonImage?(UIImage(appImage: .filled_star).original)
         } else {
             self.updateBarButtonImage?(UIImage(appImage: .empty_star).original)
         }
         
+        //Update next/previous/first/last button states
         self.updateButtonState?()
     }
 }
@@ -146,15 +164,24 @@ extension HomeViewModel {
     }
     
     func addOrRemoveFavorite() {
-        var newFavorites = favorites
-        if self.favorites.contains(currentComicId) {
-            newFavorites.removeAll { $0 == currentComicId }
+        if let comicIndex = self.favoriteComics?.firstIndex(where: {$0.num?.toString() == currentComicId}) {
+            //Remove favorite
+            favoriteComics?.remove(at: comicIndex)
             self.updateBarButtonImage?(UIImage(appImage: .empty_star).original)
         } else {
-            newFavorites.append(currentComicId)
-            self.updateBarButtonImage?(UIImage(appImage: .filled_star).original)
+            if let currentComic = comic {
+                //Initialise favorites if empty
+                if favoriteComics == nil {
+                    favoriteComics = []
+                }
+                //Add a new favorite
+                favoriteComics?.append(currentComic)
+                self.updateBarButtonImage?(UIImage(appImage: .filled_star).original)
+            }
         }
-        UserDefaults.standard.setFavorites(newFavorites)
+        
+        //Save preferences locally
+        comicStorageService.save(object: favoriteComics)
     }
     
     func loadExplanation() {
