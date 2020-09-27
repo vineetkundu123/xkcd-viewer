@@ -125,7 +125,6 @@ class HomeViewModel {
         //Update title
         self.updateTitle?(comic.title ?? "")
         
-        
         //Manage Favorite icon
         if self.favoriteComics?.contains(where: {$0.num?.toString() == currentComicId}) ?? false {
             self.updateBarButtonImage?(UIImage(appImage: .filled_star).original)

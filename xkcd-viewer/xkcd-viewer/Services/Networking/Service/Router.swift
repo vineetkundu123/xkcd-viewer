@@ -12,6 +12,11 @@ class Router<EndPoint: EndPointType>: NetworkRouter {
     private var task: URLSessionTask?
     
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
+        guard Constants.Mode.appMode == .live else {
+            completion(Data(), HTTPURLResponse(url: URL(string: "https://example.com")!, statusCode: 200, httpVersion: "1.1", headerFields: [:]), nil)
+            return
+        }
+        
         let session = URLSession.shared
         do {
             let request = try buildRequest(from: route)
