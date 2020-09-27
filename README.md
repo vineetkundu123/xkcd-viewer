@@ -30,6 +30,9 @@ https://github.com/roberthein/TinyConstraints
 
 A user is anyone who is using the phone and could open the application - there is no authentication and authorization to open and read the application. This also means that anyone with access to the phone could also see the user's favorite comics stored in the application
 
+### Read comic
+
+User can read the comic as it is on screen or could also use pinch-zoom gesture to make it bigger!
 
 ### Browse comics
 
