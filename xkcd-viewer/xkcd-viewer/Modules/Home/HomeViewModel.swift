@@ -122,6 +122,8 @@ class HomeViewModel {
         //Update image
         if let imageData = self.comic?.imageData {
             self.updateImage?(UIImage(data: imageData) ?? UIImage(), false)
+        } else {
+            self.fetchComicStrip()
         }
         
         //Update title
@@ -135,7 +137,13 @@ class HomeViewModel {
         }
         
         //Update next/previous/first/last button states
+        updateNavigationState()
         self.updateButtonState?()
+    }
+    
+    private func updateNavigationState() {
+        isFirstStrip = (currentComicId == Constants.Comic.firstComicId)
+        isLastStrip = (currentComicId == latestComicId)
     }
 }
 
@@ -158,9 +166,7 @@ extension HomeViewModel {
             currentComicId = String((Int(currentComicId) ?? 2) - 1)
         }
         
-        isFirstStrip = (currentComicId == Constants.Comic.firstComicId)
-        isLastStrip = (currentComicId == latestComicId)
-        
+        updateNavigationState()
         fetchData()
     }
     
